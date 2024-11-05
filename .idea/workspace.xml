@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="task 1 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/CoreCompetency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/CoreCompetency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Job.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,16 +53,18 @@
   "keyToString": {
     "Gradle.Build techjobs-oo-java-graded-17.executor": "Run",
     "Gradle.Tests in 'org.launchcode.techjobs.oo'.executor": "Run",
+    "JUnit.JobTest.executor": "Run",
     "JUnit.org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/klpum/IdeaProjects/techjobs-oo-java-graded-17"
+    "last_opened_file_path": "C:/Users/klpum/IdeaProjects/techjobs-oo-java-graded-17",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.Tests in 'org.launchcode.techjobs.oo'">
+  <component name="RunManager" selected="JUnit.JobTest">
     <configuration name="Tests in 'org.launchcode.techjobs.oo'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -90,6 +89,18 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="JobTest" type="JUnit" factoryName="JUnit">
+      <module name="techjobs-oo-java17-graded.test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="PACKAGE_NAME" value="org.launchcode.techjobs.oo" />
+      <option name="MAIN_CLASS_NAME" value="org.launchcode.techjobs.oo.JobTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="techjobs-oo-java17-graded.main" />
       <extension name="coverage">
@@ -99,11 +110,18 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.launchcode.techjobs.oo" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
+      <item itemvalue="JUnit.JobTest" />
+      <item itemvalue="JUnit.org.launchcode.techjobs.oo in techjobs-oo-java17-graded.main" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
@@ -120,6 +138,19 @@
       <option name="presentableId" value="Default" />
       <updated>1685977091317</updated>
     </task>
+    <task id="LOCAL-00001" summary="task 1 done">
+      <option name="closed" value="true" />
+      <created>1730772379373</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730772379374</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="task 1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 1 done" />
   </component>
 </project>
