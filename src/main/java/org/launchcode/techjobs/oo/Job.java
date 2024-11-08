@@ -87,5 +87,27 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+    // Updated toString method
+    @Override
+    public String toString() {
+        // Handling empty or null fields
+        String jobName = (name == null || name.isEmpty()) ? "Data not available" : name;
+        String jobEmployer = (employer == null || employer.getValue().isEmpty()) ? "Data not available" : employer.getValue();
+        String jobLocation = (location == null || location.getValue().isEmpty()) ? "Data not available" : location.getValue();
+        String jobPositionType = (positionType == null || positionType.getValue().isEmpty()) ? "Data not available" : positionType.getValue();
+        String jobCoreCompetency = (coreCompetency == null || coreCompetency.getValue().isEmpty()) ? "Data not available" : coreCompetency.getValue();
+
+        // Constructing the formatted string
+        return System.lineSeparator() +
+                "ID: " + id + System.lineSeparator() +
+                "Name: " + jobName + System.lineSeparator() +
+                "Employer: " + jobEmployer + System.lineSeparator() +
+                "Location: " + jobLocation + System.lineSeparator() +
+                "Position Type: " + jobPositionType + System.lineSeparator() +
+                "Core Competency: " + jobCoreCompetency + System.lineSeparator();
+    }
 }
+
+
 

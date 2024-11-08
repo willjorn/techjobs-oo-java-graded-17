@@ -66,8 +66,81 @@ public class JobTest {
                 new PositionType("Full Stack"),
                 new CoreCompetency("Java")
         );
-        // Act & Assert: TESt that equals returns false for jobs with different IDS
+        // Act & Assert: Test that equals returns false for jobs with different IDS
         assertFalse(job1.equals(job2));
     }
-    }
+    //Test that toString starts and ends with a newline character
+   @Test
+   public void testToStringStartsAndEndsWithNewLine(){
+        //arrange: Create a Job object with sample data
+       Job testJob= new Job(
+               "Product tester",
+               new Employer("ACME"),
+               new Location("Desert"),
+               new PositionType("Quality control"),
+               new CoreCompetency("Persistence")
+       );
+       //Convert the Job object to a string
+       String jobString= testJob.toString();
+//  Check that the string starts with a newline character
+       assertEquals(System.lineSeparator(), jobString.substring(0, System.lineSeparator().length()));
+
+       //  Check that the string ends with a newline character
+       assertEquals(System.lineSeparator(), jobString.substring(jobString.length() - System.lineSeparator().length()));
+   }
+   @Test
+   public void testToStringContainsCorrectLabelsAndData(){
+        // arrange a job with specific data
+       Job testjob = new Job(
+               "Product Tester",
+               new Employer("ACME"),
+               new Location("Desert"),
+               new PositionType("Quality control"),
+               new CoreCompetency("Persistence")
+       );
+       // convert the job object to a string
+       String jobString = testjob.toString();
+
+
+       //Expected output
+       String expectedOutput= System.lineSeparator() +
+               "ID: "+testjob.getId()+System.lineSeparator()+
+               "Name: Product Tester" +System.lineSeparator()+
+               "Employer: ACME"+ System.lineSeparator()+
+               "Location: Desert"+ System.lineSeparator()+
+               "Position Type: Quality control" + System.lineSeparator()+
+               "Core Competency: Persistence" + System.lineSeparator();
+// Assert: Check that the output matches the expected format
+       assertEquals(expectedOutput, jobString);
+
+       }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        // Arrange: Create a Job object with some empty fields
+        Job testJob = new Job(
+                "", // Empty name
+                new Employer(""), // Empty employer
+                new Location("Desert"),
+                new PositionType(""), // Empty position type
+                new CoreCompetency("Persistence")
+        );
+
+        // Act: Convert the Job object to a string
+        String jobString = testJob.toString();
+
+        // Expected output
+        String expectedOutput = System.lineSeparator() +
+                "ID: " + testJob.getId() + System.lineSeparator() +
+                "Name: Data not available" + System.lineSeparator() +
+                "Employer: Data not available" + System.lineSeparator() +
+                "Location: Desert" + System.lineSeparator() +
+                "Position Type: Data not available" + System.lineSeparator() +
+                "Core Competency: Persistence" + System.lineSeparator();
+
+        // Assert: Check that the output matches the expected format
+        assertEquals(expectedOutput, jobString);
+   }
+}
+
 
