@@ -2,53 +2,48 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class PositionType {
+public class PositionType extends JobField {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
-
-    public PositionType() {
-        id = nextId;
-        nextId++;
-    }
-
+    // Constructor that calls the JobField constructor to set the value and handle the id
     public PositionType(String value) {
-        this();
-        this.value = value;
+        super(value);  // Calls the JobField constructor with the value
     }
 
-    // TODO: Add a custom toString() method that returns the data stored in 'value'.
-@Override
+    // Custom toString, equals, and hashCode methods (inherited from JobField)
+
+    @Override
     public String toString() {
-        return value;
-}
-    // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
-    //  their id fields match.
+        return getValue();  // Returns the value inherited from JobField
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PositionType)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         PositionType that = (PositionType) o;
-        return id == that.id;
+        return getId() == that.getId();  // Compares PositionType objects by their id
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(getId());  // Generates hash code based on id
     }
-    // Getters and Setters:
 
+    // Getters and Setters (inherited from JobField)
+
+    @Override
     public int getId() {
-        return id;
+        return super.getId();  // Access the id from JobField
     }
 
+    @Override
     public String getValue() {
-        return value;
+        return super.getValue();  // Access the value from JobField
     }
 
+    @Override
     public void setValue(String value) {
-        this.value = value;
+        super.setValue(value);  // Access the setter from JobField
     }
-
 }
+

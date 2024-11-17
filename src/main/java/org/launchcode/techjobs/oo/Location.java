@@ -2,58 +2,48 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Location {
+public class Location extends JobField {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
-
-    public Location() {
-        id = nextId;
-        nextId++;
-    }
-
-    // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
-    //  constructor should also call the empty constructor in order to initialize the 'id' field.
-// Constructor that takes a string and assigns it to the 'value' field
+    // Constructor that calls the JobField constructor to set the value and handle the id
     public Location(String value) {
-        this(); // Call the default constructor to initialize 'id'
-        this.value = value;
+        super(value);  // Calls the JobField constructor with the value
     }
 
-
-    // Custom toString, equals, and hashCode methods:
+    // Custom toString, equals, and hashCode methods (inherited from JobField)
 
     @Override
     public String toString() {
-        return value;
+        return getValue();  // Returns the value inherited from JobField
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Location)) return false;
-        Location location = (Location) o;
-        return getId() == location.getId();
+        if (o == null || getClass() != o.getClass()) return false;
+        PositionType that = (PositionType) o;
+        return getId() == that.getId();  // Compares PositionType objects by their id
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hash(getId());  // Generates hash code based on id
     }
 
-    // Getters and Setters:
+    // Getters and Setters (inherited from JobField)
 
+    @Override
     public int getId() {
-        return id;
+        return super.getId();  // Access the id from JobField
     }
 
+    @Override
     public String getValue() {
-        return value;
+        return super.getValue();  // Access the value from JobField
     }
 
+    @Override
     public void setValue(String value) {
-        this.value = value;
+        super.setValue(value);  // Access the setter from JobField
     }
-
 }
+

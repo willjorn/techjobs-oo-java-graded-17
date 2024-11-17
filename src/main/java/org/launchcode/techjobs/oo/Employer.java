@@ -2,54 +2,42 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Employer {
+public class Employer extends JobField {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
-
-    public Employer() {
-        id = nextId;
-        nextId++;
-    }
-
+    // Constructor that calls the super constructor (JobField constructor)
     public Employer(String value) {
-        this();
-        this.value = value;
+        super(value); // Call to JobField constructor to set value and handle id
     }
 
-    // Custom toString, equals, and hashCode methods:
-
+    // Custom toString, equals, and hashCode methods (these can be inherited from JobField)
     @Override
     public String toString() {
-        return value;
+        return getValue();  // Returns the value inherited from JobField
     }
 
     @Override
-    public boolean equals(Object o) {  // Two objects are equal if they have the same id.
+    public boolean equals(Object o) {  // Two objects are equal if they have the same id
         if (this == o) return true;
-        if (!(o instanceof Employer)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Employer employer = (Employer) o;
         return getId() == employer.getId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hash(getId());  // Ensures uniqueness based on id
     }
 
-    // Getters and Setters:
-
+    // Getters and Setters (inherited from JobField)
     public int getId() {
-        return id;
+        return super.getId();  // Access the id from JobField
     }
 
     public String getValue() {
-        return value;
+        return super.getValue();  // Access the value from JobField
     }
 
     public void setValue(String value) {
-        this.value = value;
+        super.setValue(value);  // Access the setter from JobField
     }
-
 }
